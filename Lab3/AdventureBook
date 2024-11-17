@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+	internal class AdventureBook : Book
+    {
+        public string AdventureDetails { get; set; }
+
+        public AdventureBook(string title, Person author, DateTime publicationDate, string adventureDetails)
+            : base(title, author, publicationDate)
+        {
+            AdventureDetails = adventureDetails;
+        }
+
+        public override void View()
+        {
+            base.View();
+            Console.WriteLine($"Opis przygody: {AdventureDetails}");
+        }
+    }
+}
